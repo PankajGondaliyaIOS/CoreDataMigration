@@ -3,23 +3,32 @@
 //  CoreDataMigration
 //
 //  Created by pankaj on 01/01/18.
-//  Copyright © 2018 Infostretch. All rights reserved.
+//  Copyright © 2018 pankaj. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //Employee
+        CoreDataBusinessLogic.sharedInstance().addEmployee(strEmployeeName: "Pankaj Gondaliya")
+        CoreDataBusinessLogic.sharedInstance().fetchAllEmployees()
+        
+        //Client
+        CoreDataBusinessLogic.sharedInstance().addClient(strClientName: "Gondaliya Pankaj")
+        CoreDataBusinessLogic.sharedInstance().fetchAllClient()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 
+//MARK: Coredata functions
+extension ViewController {
+    
+}

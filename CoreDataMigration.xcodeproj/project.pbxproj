@@ -13,6 +13,10 @@
 		2CEBF3231FFA2DA400BC719A /* CoreDataMigration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBF3211FFA2DA400BC719A /* CoreDataMigration.xcdatamodeld */; };
 		2CEBF3251FFA2DA400BC719A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBF3241FFA2DA400BC719A /* Assets.xcassets */; };
 		2CEBF3281FFA2DA400BC719A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBF3261FFA2DA400BC719A /* LaunchScreen.storyboard */; };
+		2CEBF3301FFA2E1B00BC719A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBF32F1FFA2E1B00BC719A /* CoreDataManager.swift */; };
+		2CEBF3321FFA32A500BC719A /* CoreDataBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBF3311FFA32A500BC719A /* CoreDataBusinessLogic.swift */; };
+		2CEBF3341FFA401600BC719A /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBF3331FFA401600BC719A /* CoreDataHandler.swift */; };
+		2CEBF3381FFA459900BC719A /* CoreDataMigrationClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBF3351FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		2CEBF3241FFA2DA400BC719A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CEBF3271FFA2DA400BC719A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CEBF3291FFA2DA400BC719A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CEBF32F1FFA2E1B00BC719A /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		2CEBF3311FFA32A500BC719A /* CoreDataBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBusinessLogic.swift; sourceTree = "<group>"; };
+		2CEBF3331FFA401600BC719A /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		2CEBF3361FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataMigrationClient.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				2CEBF31A1FFA2DA400BC719A /* AppDelegate.swift */,
 				2CEBF31C1FFA2DA400BC719A /* ViewController.swift */,
+				2CEBF32F1FFA2E1B00BC719A /* CoreDataManager.swift */,
+				2CEBF3331FFA401600BC719A /* CoreDataHandler.swift */,
+				2CEBF3311FFA32A500BC719A /* CoreDataBusinessLogic.swift */,
 				2CEBF31E1FFA2DA400BC719A /* Main.storyboard */,
 				2CEBF3241FFA2DA400BC719A /* Assets.xcassets */,
 				2CEBF3261FFA2DA400BC719A /* LaunchScreen.storyboard */,
 				2CEBF3291FFA2DA400BC719A /* Info.plist */,
 				2CEBF3211FFA2DA400BC719A /* CoreDataMigration.xcdatamodeld */,
+				2CEBF3351FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodeld */,
 			);
 			path = CoreDataMigration;
 			sourceTree = "<group>";
@@ -140,7 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEBF31D1FFA2DA400BC719A /* ViewController.swift in Sources */,
+				2CEBF3341FFA401600BC719A /* CoreDataHandler.swift in Sources */,
 				2CEBF3231FFA2DA400BC719A /* CoreDataMigration.xcdatamodeld in Sources */,
+				2CEBF3321FFA32A500BC719A /* CoreDataBusinessLogic.swift in Sources */,
+				2CEBF3381FFA459900BC719A /* CoreDataMigrationClient.xcdatamodeld in Sources */,
+				2CEBF3301FFA2E1B00BC719A /* CoreDataManager.swift in Sources */,
 				2CEBF31B1FFA2DA400BC719A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreDataMigration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Infostretch.CoreDataMigration;
+				PRODUCT_BUNDLE_IDENTIFIER = Pankaj.CoreDataMigration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CoreDataMigration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Infostretch.CoreDataMigration;
+				PRODUCT_BUNDLE_IDENTIFIER = Pankaj.CoreDataMigration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,6 +349,16 @@
 			);
 			currentVersion = 2CEBF3221FFA2DA400BC719A /* CoreDataMigration.xcdatamodel */;
 			path = CoreDataMigration.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2CEBF3351FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CEBF3361FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodel */,
+			);
+			currentVersion = 2CEBF3361FFA453B00BC719A /* CoreDataMigrationClient.xcdatamodel */;
+			path = CoreDataMigrationClient.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
